@@ -1,0 +1,350 @@
+/* Portfolio Website Styles - Solomon Sands */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Ensure proper centering for main elements */
+.profile-section {
+    text-align: center;
+}
+
+.profile-info {
+    text-align: center !important;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Navigation */
+.nav-bar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-bar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Cards and Components */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Skills and Tags */
+.skill-tag, .tech-tag {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 4px;
+}
+
+.skills-grid, .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-production {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: white;
+}
+
+.status-development {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    color: white;
+}
+
+.status-research {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    color: white;
+}
+
+/* Achievements and Lists */
+.achievement, .highlight {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+    line-height: 1.4;
+}
+
+.achievement::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+}
+
+.highlight::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    margin-top: 2px;
+}
+
+/* Icons */
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Contact Elements */
+.contact-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Clearance Badge */
+.clearance-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "...";
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: "..."; }
+    40% { content: ".."; }
+    60% { content: "."; }
+    80%, 100% { content: ""; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .nav-bar a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    
+    .skills-grid, .tech-tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .contact-item {
+        margin: 5px 0;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .nav-bar,
+    .print-button {
+        display: none !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+    }
+    
+    .gradient-text {
+        -webkit-text-fill-color: initial !important;
+        color: #333 !important;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.contact-item:focus,
+.nav-bar a:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #333;
+    }
+    
+    .btn-primary {
+        background: #000;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+}

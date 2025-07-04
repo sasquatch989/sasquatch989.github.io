@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Projects - Solomon Sands | AI-Powered Infrastructure Solutions</title>
+    <meta name="description" content="Explore Solomon Sands' technical projects including AI-powered monitoring platforms, SRE training environments, and infrastructure automation solutions. Open source and enterprise projects.">
+    <meta name="keywords" content="Technical Projects, AI Infrastructure, SRE Projects, Computer Vision, FastAPI, Prometheus, Grafana, Open Source, Infrastructure Automation">
+    <meta name="author" content="Solomon J. Sands">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solomonsands.dev/projects.html">
+    <meta property="og:title" content="Technical Projects - Solomon Sands | AI-Powered Infrastructure">
+    <meta property="og:description" content="Explore AI-powered infrastructure projects, SRE training platforms, and automation solutions by Solomon Sands.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solomonsands.dev/projects.html">
+    <meta property="twitter:title" content="Technical Projects - Solomon Sands | AI-Powered Infrastructure">
+    <meta property="twitter:description" content="Explore AI-powered infrastructure projects, SRE training platforms, and automation solutions by Solomon Sands.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .project-title {
+            flex: 1;
+        }
+
+        .project-title h3 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .project-type {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            margin-bottom: 20px;
+        }
+
+        .tech-stack h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-highlights {
+            margin-bottom: 20px;
+        }
+
+        .project-highlights h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: flex-start;
+            margin: 8px 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .highlight::before {
+            content: "⚡";
+            margin-right: 10px;
+            color: #667eea;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-production {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+        }
+
+        .status-development {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            color: white;
+        }
+
+        .status-research {
+            background: linear-gradient(45deg, #9b59b6, #8e44ad);
+            color: white;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .project-link {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .project-link:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .skills-overview {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .skills-overview h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .skills-overview p {
+            color: #f0f0f0;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .skill-category h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            color: #f0f0f0;
+        }
+
+        .skill-list li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skill-list li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .project-card {
+                padding: 20px;
+            }
+            
+            .skills-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <a href="index.html">← Back to Portfolio</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="header">
+            <h1>Technical Projects</h1>
+            <p>AI-Driven Infrastructure Solutions & Platform Engineering</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">⚡</div>
+                    <div class="project-title">
+                        <h3>AI-Powered Infrastructure Monitoring & Automation</h3>
+                        <div class="project-type">Enterprise Solution</div>
+                    </div>
+                    <div class="project-status status-production">Live</div>
+                </div>
+                
+                <div class="project-description">
+                    Comprehensive monitoring and automation platform that leverages Computer Vision for intelligent VDI application testing. Built custom Ansible collection converting PyAutoGUI and EasyOCR capabilities into automated smoke testing modules for virtual desktop infrastructure environments.
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Python</div>
+                        <div class="tech-tag">OpenCV</div>
+                        <div class="tech-tag">EasyOCR</div>
+                        <div class="tech-tag">PyAutoGUI</div>
+                        <div class="tech-tag">FastAPI</div>
+                        <div class="tech-tag">Ansible Collection</div>
+                        <div class="tech-tag">Prometheus</div>
+                        <div class="tech-tag">Grafana</div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Key Achievements</h4>
+                    <div class="highlight">40% reduction in alert noise through ML-based filtering</div>
+                    <div class="highlight">25% improvement in incident detection time</div>
+                    <div class="highlight">Eliminated 15+ hours of manual VDI testing weekly</div>
+                    <div class="highlight">99.9% accuracy in environment validation</div>
+                    <div class="highlight">Custom Ansible modules for automated VDI smoke testing</div>
+                    <div class="highlight">Computer Vision-based application state detection</div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="project-link" style="opacity: 0.5; cursor: not-allowed;">🔒 Proprietary System</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🎓</div>
+                    <div class="project-title">
+                        <h3>SRE Masterclass Training Platform</h3>
+                        <div class="project-type">Open Source Project</div>
+                    </div>
+                    <div class="project-status status-development">Near Completion</div>
+                </div>
+                
+                <div class="project-description">
+                    Comprehensive hands-on SRE training environment featuring microservices architecture, chaos engineering scenarios, and full observability stack. Designed to teach real-world SRE principles through practical exercises and controlled failure scenarios.
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Docker</div>
+                        <div class="tech-tag">Python/FastAPI</div>
+                        <div class="tech-tag">Go</div>
+                        <div class="tech-tag">React</div>
+                        <div class="tech-tag">Vue.js</div>
+                        <div class="tech-tag">Prometheus</div>
+                        <div class="tech-tag">Grafana</div>
+                        <div class="tech-tag">Jaeger</div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Key Features</h4>
+                    <div class="highlight">Complete microservices e-commerce simulation</div>
+                    <div class="highlight">Entropy Engine for controlled chaos engineering</div>
+                    <div class="highlight">SLO monitoring with burn rate alerts</div>
+                    <div class="highlight">Distributed tracing and log aggregation</div>
+                    <div class="highlight">Comprehensive Grafana dashboards</div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/sre-masterclass/sre-masterclass" class="project-link" target="_blank">🔗 GitHub Repo</a>
+                    <a href="#" class="project-link">📚 Documentation</a>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">📊</div>
+                    <div class="project-title">
+                        <h3>MetricsForge - API Metrics Aggregation</h3>
+                        <div class="project-type">Open Source Microservice</div>
+                    </div>
+                    <div class="project-status status-production">Production Ready</div>
+                </div>
+                
+                <div class="project-description">
+                    A powerful and flexible solution for collecting metrics from various API endpoints and exposing them in Prometheus format. Bridges the gap between proprietary APIs and Prometheus monitoring infrastructure with advanced authentication, caching, and error handling.
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Python</div>
+                        <div class="tech-tag">FastAPI</div>
+                        <div class="tech-tag">Prometheus</div>
+                        <div class="tech-tag">Pydantic</div>
+                        <div class="tech-tag">AsyncIO</div>
+                        <div class="tech-tag">OAuth</div>
+                        <div class="tech-tag">JSONPath</div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Key Achievements</h4>
+                    <div class="highlight">Multiple authentication methods (Basic, Bearer, OAuth, Token Exchange)</div>
+                    <div class="highlight">Circuit breakers and retry mechanisms for reliability</div>
+                    <div class="highlight">Dynamic metric extraction using JSONPath expressions</div>
+                    <div class="highlight">Built-in caching system with configurable TTL</div>
+                    <div class="highlight">Comprehensive admin API and health monitoring</div>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/sasquatch989/metricsforge" class="project-link" target="_blank">🔗 GitHub Repo</a>
+                    <a href="#" class="project-link">⚙️ API Docs</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🧠</div>
+                    <div class="project-title">
+                        <h3>Personal AI/ML Infrastructure Lab</h3>
+                        <div class="project-type">Research Environment</div>
+                    </div>
+                    <div class="project-status status-development">Ongoing</div>
+                </div>
+                
+                <div class="project-description">
+                    GPU-optimized homelab environment for experimenting with local AI model deployment, MLOps workflows, and infrastructure automation. Serves as a testing ground for enterprise AI integration strategies.
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Ollama</div>
+                        <div class="tech-tag">CUDA</div>
+                        <div class="tech-tag">Docker</div>
+                        <div class="tech-tag">Terraform</div>
+                        <div class="tech-tag">Proxmox</div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Current Experiments</h4>
+                    <div class="highlight">Local LLM deployment and optimization</div>
+                    <div class="highlight">GPU resource management experimentation</div>
+                    <div class="highlight">Infrastructure automation research</div>
+                    <div class="highlight">AI-assisted infrastructure code generation</div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="project-link">🏠 Lab Setup</a>
+                    <a href="#" class="project-link">📊 Benchmarks</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">📚</div>
+                    <div class="project-title">
+                        <h3>SRE Knowledge Management System</h3>
+                        <div class="project-type">Enterprise Documentation Platform</div>
+                    </div>
+                    <div class="project-status status-production">Deployed</div>
+                </div>
+                
+                <div class="project-description">
+                    Established comprehensive Standard Operating Procedure (SOP) library with organization-wide contribution standards, automated review workflows, and compliance tracking for regulated environments using Atlassian Confluence.
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Confluence</div>
+                        <div class="tech-tag">Atlassian</div>
+                        <div class="tech-tag">Markdown</div>
+                        <div class="tech-tag">Templates</div>
+                        <div class="tech-tag">Workflow Automation</div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Key Features</h4>
+                    <div class="highlight">Standardized SOP templates and contribution guidelines</div>
+                    <div class="highlight">Automated compliance validation workflows</div>
+                    <div class="highlight">Cross-team collaboration and review processes</div>
+                    <div class="highlight">Searchable knowledge base with tagging system</div>
+                    <div class="highlight">Version control and change tracking</div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="project-link" style="opacity: 0.5; cursor: not-allowed;">🔒 Corporate Confluence Space</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🔧</div>
+                    <div class="project-title">
+                        <h3>SDN Automation Scripts</h3>
+                        <div class="project-type">Network Automation</div>
+                    </div>
+                    <div class="project-status status-production">Legacy</div>
+                </div>
+                
+                <div class="project-description">
+                    Developed Python and Bash automation solutions for white-box networking platforms (PicOS), creating standardized health-check frameworks and troubleshooting workflows for complex SDN environments.
+                </div>
+
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Python</div>
+                        <div class="tech-tag">Bash</div>
+                        <div class="tech-tag">PicOS</div>
+                        <div class="tech-tag">SNMP</div>
+                        <div class="tech-tag">REST APIs</div>
+                        <div class="tech-tag">JSON/YAML</div>
+                    </div>
+                </div>
+
+                <div class="project-highlights">
+                    <h4>Impact Delivered</h4>
+                    <div class="highlight">70% reduction in troubleshooting time</div>
+                    <div class="highlight">30% improvement in triage efficiency</div>
+                    <div class="highlight">Standardized health-check frameworks</div>
+                    <div class="highlight">95% issue resolution rate</div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="project-link">🌐 Network Tools</a>
+                    <a href="#" class="project-link">📋 Case Studies</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-overview">
+            <h2>Technical Expertise Areas</h2>
+            <p>Core competencies spanning traditional networking foundations through modern SRE practices</p>
+            
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>🤖 AI/ML Integration</h3>
+                    <ul class="skill-list">
+                        <li>Computer Vision pipelines</li>
+                        <li>Machine Learning automation</li>
+                        <li>Local LLM deployment</li>
+                        <li>AI-assisted monitoring</li>
+                        <li>Automation workflow design</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>☁️ Cloud & Infrastructure</h3>
+                    <ul class="skill-list">
+                        <li>Docker containerization</li>
+                        <li>AWS Solutions Architecture</li>
+                        <li>Infrastructure as Code</li>
+                        <li>GitOps workflows</li>
+                        <li>Service mesh technologies</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔍 Observability</h3>
+                    <ul class="skill-list">
+                        <li>Splunk administration (certified)</li>
+                        <li>Prometheus metrics</li>
+                        <li>Grafana dashboards</li>
+                        <li>Custom monitoring solutions</li>
+                        <li>Incident response automation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔧 Automation</h3>
+                    <ul class="skill-list">
+                        <li>Ansible custom modules</li>
+                        <li>Python automation frameworks</li>
+                        <li>CI/CD pipeline design</li>
+                        <li>Process automation</li>
+                        <li>Compliance automation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🌐 Network Foundation</h3>
+                    <ul class="skill-list">
+                        <li>Traditional networking (Cisco, Juniper)</li>
+                        <li>Security appliances (Palo Alto)</li>
+                        <li>CCNP-level protocol knowledge</li>
+                        <li>Evolution into SDN and automation</li>
+                        <li>Infrastructure troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

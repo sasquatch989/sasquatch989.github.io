@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Solomon Sands | Get In Touch</title>
+    <meta name="description" content="Contact Solomon Sands - SRE Tech Lead for infrastructure consulting, collaboration opportunities, or technical discussions. Multiple ways to connect.">
+    <meta name="keywords" content="Contact, Solomon Sands, SRE Consulting, Infrastructure Expert, Technical Collaboration">
+    <meta name="author" content="Solomon J. Sands">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solomonsands.dev/contact.html">
+    <meta property="og:title" content="Contact - Solomon Sands | Get In Touch">
+    <meta property="og:description" content="Contact Solomon Sands for infrastructure consulting, collaboration opportunities, or technical discussions.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solomonsands.dev/contact.html">
+    <meta property="twitter:title" content="Contact - Solomon Sands | Get In Touch">
+    <meta property="twitter:description" content="Contact Solomon Sands for infrastructure consulting, collaboration opportunities, or technical discussions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-form h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .contact-info-card h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .contact-method .icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .contact-method .details h3 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-method .details p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .contact-method a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .availability {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .availability h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .availability p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #27ae60;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .form-success {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .form-error {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form,
+            .contact-info-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="nav-bar">
+            <a href="index.html">← Back to Portfolio</a>
+            <a href="projects.html">Technical Projects</a>
+            <a href="resume.html">Resume</a>
+        </div>
+
+        <div class="contact-header">
+            <h1>Get In Touch</h1>
+            <p>Let's discuss your infrastructure challenges and opportunities</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                
+                <div class="form-success" id="formSuccess">
+                    ✓ Thank you! Your message has been sent successfully. I'll get back to you within 24 hours.
+                </div>
+                
+                <div class="form-error" id="formError">
+                    ✗ There was an error sending your message. Please try again or use the direct contact methods.
+                </div>
+
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic...</option>
+                            <option value="consulting">Infrastructure Consulting</option>
+                            <option value="collaboration">Technical Collaboration</option>
+                            <option value="speaking">Speaking Opportunity</option>
+                            <option value="hiring">Job Opportunity</option>
+                            <option value="mentoring">Mentoring/Advice</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project, challenge, or opportunity..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline">Preferred Response Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="24hours">Within 24 hours</option>
+                            <option value="week">Within a week</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info-card">
+                <h2>Contact Information</h2>
+
+                <div class="contact-method" onclick="revealContactInfo('email')" style="cursor: pointer;" id="emailMethod">
+                    <div class="icon">📧</div>
+                    <div class="details">
+                        <h3>Email</h3>
+                        <p>Click to Show Email</p>
+                    </div>
+                </div>
+
+                <div class="contact-method" onclick="revealContactInfo('phone')" style="cursor: pointer;" id="phoneMethod">
+                    <div class="icon">📱</div>
+                    <div class="details">
+                        <h3>Phone</h3>
+                        <p>Click to Show Phone</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="icon">💼</div>
+                    <div class="details">
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://linkedin.com/in/solomonjsands" target="_blank">linkedin.com/in/solomonjsands</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="icon">💻</div>
+                    <div class="details">
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/sasquatch989" target="_blank">github.com/sasquatch989</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="icon">📍</div>
+                    <div class="details">
+                        <h3>Location</h3>
+                        <p>Washington DC Metro Area</p>
+                    </div>
+                </div>
+
+                <div class="availability">
+                    <h3><span class="status-indicator"></span>Current Availability</h3>
+                    <p>Available for consulting projects and technical discussions. Currently open to new opportunities in SRE leadership roles.</p>
+                    <p style="margin-top: 10px;"><strong>Response Time:</strong> Typically within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="portfolio.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function() {
+            // You'll need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+            // Get this from your EmailJS dashboard after creating an account
+            emailjs.init('YOUR_PUBLIC_KEY');
+        })();
+
+        // Enhanced contact form functionality with EmailJS
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formSuccess = document.getElementById('formSuccess');
+            const formError = document.getElementById('formError');
+            
+            // Hide previous messages
+            formSuccess.style.display = 'none';
+            formError.style.display = 'none';
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value || 'Not specified',
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                timeline: document.getElementById('timeline').value,
+                timestamp: new Date().toLocaleString(),
+                fullName: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value
+            };
+            
+            // Send email using EmailJS
+            // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    formSuccess.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                    
+                    // Reset field border colors
+                    const allFields = document.querySelectorAll('input, textarea, select');
+                    allFields.forEach(field => {
+                        field.style.borderColor = '#e0e0e0';
+                    });
+                    
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    formError.innerHTML = '✗ There was an error sending your message. Please try again or contact me directly at solomon.j.sands@gmail.com';
+                    formError.style.display = 'block';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    
+                    // Scroll to error message
+                    formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+        });
+
+        // Form validation enhancements
+        const requiredFields = document.querySelectorAll('input[required], textarea[required], select[required]');
+        
+        requiredFields.forEach(field => {
+            field.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+            
+            field.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = '#27ae60';
+                }
+            });
+        });
+
+        // Email validation
+        document.getElementById('email').addEventListener('blur', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (this.value && !emailRegex.test(this.value)) {
+                this.style.borderColor = '#e74c3c';
+            } else if (this.value) {
+                this.style.borderColor = '#27ae60';
+            }
+        });
+
+        // Contact information reveal functionality
+        function revealContactInfo(type) {
+            if (type === 'email') {
+                const emailMethod = document.getElementById('emailMethod');
+                emailMethod.classList.add('loading');
+                emailMethod.style.cursor = 'default';
+                
+                setTimeout(() => {
+                    emailMethod.innerHTML = `
+                        <div class="icon">📧</div>
+                        <div class="details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:solomon.j.sands@gmail.com">solomon.j.sands@gmail.com</a></p>
+                        </div>
+                    `;
+                    emailMethod.classList.remove('loading');
+                    emailMethod.onclick = null; // Remove click handler
+                }, 500);
+            } else if (type === 'phone') {
+                const phoneMethod = document.getElementById('phoneMethod');
+                phoneMethod.classList.add('loading');
+                phoneMethod.style.cursor = 'default';
+                
+                setTimeout(() => {
+                    phoneMethod.innerHTML = `
+                        <div class="icon">📱</div>
+                        <div class="details">
+                            <h3>Phone</h3>
+                            <p><a href="tel:757-343-8896">(757) 343-8896</a></p>
+                        </div>
+                    `;
+                    phoneMethod.classList.remove('loading');
+                    phoneMethod.onclick = null; // Remove click handler
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>

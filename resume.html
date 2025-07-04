@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Solomon Sands | SRE Tech Lead & Infrastructure Specialist</title>
+    <meta name="description" content="Professional resume of Solomon Sands - SRE Tech Lead with 10+ years experience in infrastructure automation, AWS, Docker, and platform engineering.">
+    <meta name="keywords" content="Resume, SRE Tech Lead, Infrastructure Specialist, Platform Engineering, AWS Solutions Architect, DevOps, AI/ML Infrastructure">
+    <meta name="author" content="Solomon J. Sands">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solomonsands.dev/resume.html">
+    <meta property="og:title" content="Resume - Solomon Sands | SRE Tech Lead & Infrastructure Specialist">
+    <meta property="og:description" content="Professional resume of Solomon Sands - SRE Tech Lead with 10+ years experience in AI-powered infrastructure automation.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://solomonsands.dev/resume.html">
+    <meta property="twitter:title" content="Resume - Solomon Sands | SRE Tech Lead & Infrastructure Specialist">
+    <meta property="twitter:description" content="Professional resume of Solomon Sands - SRE Tech Lead with 10+ years experience in AI-powered infrastructure automation.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav-bar {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .header .title {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .contact-info span {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .clearance {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .competency-category {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .competency-category h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .competency-category p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .company {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        .role {
+            font-weight: 600;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .experience-section {
+            margin: 15px 0;
+        }
+
+        .experience-section h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .achievement {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+        }
+
+        .achievement::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .tech-category {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .tech-category strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .education-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 3px solid #667eea;
+        }
+
+        .education-item strong {
+            color: #667eea;
+        }
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .cert-item {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .award-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+
+        .award-item strong {
+            color: #667eea;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .print-instructions {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            max-width: 200px;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .print-button:hover + .print-instructions {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Enhanced Print Styles for Professional PDF Output */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            body { 
+                background: white !important;
+                font-size: 11pt !important;
+                line-height: 1.4 !important;
+                color: #000 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            .container { 
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 0.5in !important;
+                max-width: none !important;
+                background: white !important;
+                border-radius: 0 !important;
+            }
+            
+            /* Hide non-essential elements */
+            .nav-bar, 
+            .print-button { 
+                display: none !important; 
+            }
+            
+            /* Optimize headers */
+            .header {
+                margin-bottom: 20pt !important;
+                padding-bottom: 10pt !important;
+                border-bottom: 2pt solid #667eea !important;
+            }
+            
+            .header h1 {
+                font-size: 18pt !important;
+                color: #667eea !important;
+                margin-bottom: 6pt !important;
+            }
+            
+            .header .title {
+                font-size: 12pt !important;
+                color: #333 !important;
+                margin-bottom: 8pt !important;
+            }
+            
+            .contact-info {
+                font-size: 10pt !important;
+                margin-bottom: 6pt !important;
+            }
+            
+            .clearance {
+                background: #ff6b6b !important;
+                color: white !important;
+                padding: 3pt 8pt !important;
+                border-radius: 10pt !important;
+                font-size: 8pt !important;
+                font-weight: bold !important;
+            }
+            
+            /* Section headers */
+            .section h2 {
+                color: #667eea !important;
+                font-size: 14pt !important;
+                margin-bottom: 8pt !important;
+                margin-top: 12pt !important;
+                padding-bottom: 3pt !important;
+                border-bottom: 1pt solid #667eea !important;
+            }
+            
+            /* Experience items */
+            .experience-item {
+                margin-bottom: 15pt !important;
+                padding: 10pt !important;
+                background: #f8f9ff !important;
+                border-radius: 5pt !important;
+                border-left: 3pt solid #667eea !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            
+            .company {
+                font-weight: bold !important;
+                color: #667eea !important;
+                font-size: 12pt !important;
+            }
+            
+            .role {
+                font-weight: 600 !important;
+                color: #000 !important;
+                margin: 3pt 0 !important;
+                font-size: 11pt !important;
+            }
+            
+            .date {
+                color: #666 !important;
+                font-style: italic !important;
+                font-size: 10pt !important;
+            }
+            
+            .experience-section h4 {
+                color: #667eea !important;
+                margin-bottom: 4pt !important;
+                font-size: 10pt !important;
+            }
+            
+            .achievement {
+                margin: 4pt 0 !important;
+                padding-left: 12pt !important;
+                color: #333 !important;
+                font-size: 10pt !important;
+                line-height: 1.3 !important;
+            }
+            
+            .achievement::before {
+                content: "•" !important;
+                position: absolute !important;
+                left: 0 !important;
+                color: #667eea !important;
+                font-weight: bold !important;
+            }
+            
+            /* Competencies and other grids */
+            .competencies-grid,
+            .tech-grid,
+            .awards-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8pt !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .competency-category,
+            .tech-category,
+            .award-item {
+                background: #f8f9ff !important;
+                padding: 8pt !important;
+                border-radius: 4pt !important;
+                border-left: 2pt solid #667eea !important;
+                margin-bottom: 4pt !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .competency-category h3,
+            .tech-category strong,
+            .award-item strong {
+                color: #667eea !important;
+                font-size: 10pt !important;
+            }
+            
+            /* Education and certifications */
+            .education-item {
+                background: #f8f9ff !important;
+                padding: 8pt !important;
+                border-radius: 4pt !important;
+                margin-bottom: 6pt !important;
+                border-left: 2pt solid #667eea !important;
+            }
+            
+            .certifications {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 4pt !important;
+            }
+            
+            .cert-item {
+                background: #667eea !important;
+                color: white !important;
+                padding: 6pt 8pt !important;
+                border-radius: 4pt !important;
+                text-align: center !important;
+                font-weight: 500 !important;
+                font-size: 9pt !important;
+            }
+            
+            /* Summary text */
+            .summary {
+                font-size: 11pt !important;
+                line-height: 1.5 !important;
+                color: #333 !important;
+                text-align: justify !important;
+                margin-bottom: 12pt !important;
+            }
+            
+            /* Page breaks */
+            .section {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                margin-bottom: 15pt !important;
+            }
+            
+            /* Ensure proper page margins */
+            @page {
+                margin: 0.5in !important;
+                size: letter !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">📄 Print/PDF</button>
+    <div class="print-instructions">
+        💡 Use your browser's "Save as PDF" option for best results
+    </div>
+    
+    <div class="container">
+        <div class="nav-bar">
+            <a href="index.html">← Back to Portfolio</a>
+            <a href="projects.html">Technical Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="header">
+            <h1>SOLOMON J SANDS</h1>
+            <p class="title">SRE Tech Lead | Infrastructure Automation Specialist</p>
+            <div class="contact-info">
+                <span id="emailSpan" onclick="revealContact('email')" style="cursor: pointer; color: #667eea;">📧 Click to Show Email</span>
+                <span>|</span>
+                <span>LinkedIn: /in/solomonjsands</span>
+                <span>|</span>
+                <span id="phoneSpan" onclick="revealContact('phone')" style="cursor: pointer; color: #667eea;">📱 Click to Show Phone</span>
+                <span>|</span>
+                <span>DC Metro Area</span>
+            </div>
+            
+            <script>
+                function revealContact(type) {
+                    if (type === 'email') {
+                        document.getElementById('emailSpan').innerHTML = '📧 solomon.j.sands@gmail.com';
+                        document.getElementById('emailSpan').style.cursor = 'default';
+                        document.getElementById('emailSpan').style.color = '#666';
+                    } else if (type === 'phone') {
+                        document.getElementById('phoneSpan').innerHTML = '📱 (757) 343-8896';
+                        document.getElementById('phoneSpan').style.cursor = 'default';
+                        document.getElementById('phoneSpan').style.color = '#666';
+                    }
+                }
+            </script>
+            <div class="clearance">CURRENT SECURITY CLEARANCE</div>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p class="summary">
+                SRE Tech Lead with 10+ years of infrastructure experience implementing intelligent automation solutions. Began career in traditional network engineering before evolving into SRE through SDN and automation technologies. Proven track record of designing and maintaining systems that achieve 99.99% uptime while reducing operational overhead through AI-assisted monitoring and process automation. Expertise in modern cloud-native technologies and developer productivity tools.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>CORE COMPETENCIES</h2>
+            <div class="competencies-grid">
+                <div class="competency-category">
+                    <h3>Infrastructure Automation</h3>
+                    <p>Docker, Infrastructure as Code (Terraform/Ansible), GitOps workflows, Service Mesh</p>
+                </div>
+                <div class="competency-category">
+                    <h3>AI/ML Infrastructure</h3>
+                    <p>AI-assisted automation, Computer Vision integration, Machine Learning model deployment</p>
+                </div>
+                <div class="competency-category">
+                    <h3>Cloud Architecture</h3>
+                    <p>AWS Solutions Architect certified, Multi-cloud deployments, Cost optimization, Serverless architectures</p>
+                </div>
+                <div class="competency-category">
+                    <h3>Developer Experience</h3>
+                    <p>CI/CD optimization, Developer tooling, API design (FastAPI), Productivity engineering</p>
+                </div>
+                <div class="competency-category">
+                    <h3>Site Reliability</h3>
+                    <p>Incident response automation, Observability platforms (Prometheus/Grafana), Chaos engineering</p>
+                </div>
+                <div class="competency-category">
+                    <h3>Network & Security Foundation</h3>
+                    <p>Traditional networking background (Cisco, Juniper, Palo Alto), CCNP-level knowledge, evolved into SDN and infrastructure automation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">nTrepid</div>
+                        <div class="role">SRE Tech Lead</div>
+                    </div>
+                    <div class="date">March 2020 - June 2025</div>
+                </div>
+
+                <div class="experience-section">
+                    <h4>Platform Architecture & Automation</h4>
+                    <div class="achievement">Architected AI-powered monitoring platform using Python ML libraries and Computer Vision, reducing alert noise by 40% and improving incident detection by 25% across 200+ user infrastructure</div>
+                    <div class="achievement">Built production-grade automation framework with custom Ansible modules, eliminating 15+ hours of manual operations weekly and achieving zero change-related incidents</div>
+                    <div class="achievement">Designed FastAPI-based metrics aggregation service with Prometheus integration, improving observability for systems previously limited to event logging</div>
+                </div>
+
+                <div class="experience-section">
+                    <h4>Infrastructure Leadership & Reliability</h4>
+                    <div class="achievement">Led 24/7 platform engineering team maintaining 99.99% uptime for mission-critical infrastructure in secure environments, preventing estimated $500K+ in downtime costs annually</div>
+                    <div class="achievement">Reduced Mean Time to Resolution (MTTR) from 4 hours to under 2 hours through automated incident response workflows and AI-assisted root cause analysis</div>
+                    <div class="achievement">Established company's first SRE Incident Response framework, reducing escalation confusion by 50% and standardizing cross-team collaboration protocols</div>
+                </div>
+
+                <div class="experience-section">
+                    <h4>Team Development & Process Innovation</h4>
+                    <div class="achievement">Mentored 4-person engineering team through hybrid-agile methodologies and weekly 1:1s, achieving 50% MTTR improvement and zero change casualties</div>
+                    <div class="achievement">Created comprehensive Standard Operating Procedure (SOP) library with organization-wide contribution standards, improving compliance readiness and knowledge transfer</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">Cloudistics</div>
+                        <div class="role">Systems Reliability Engineer</div>
+                    </div>
+                    <div class="date">April 2018 - March 2020</div>
+                </div>
+
+                <div class="experience-section">
+                    <h4>SDN Platform Engineering</h4>
+                    <div class="achievement">Resolved 95% of complex Software-Defined Networking (SDN) and Customer Premises Equipment issues for 50+ enterprise clients, specializing in novel networking stack troubleshooting</div>
+                    <div class="achievement">Developed Python and Bash automation scripts for white-box networking platforms (PicOS), reducing troubleshooting time by 70% and improving triage efficiency by 30%</div>
+                    <div class="achievement">Collaborated with principal engineers on networking automation development, creating standardized health-check frameworks for distributed systems</div>
+                </div>
+
+                <div class="experience-section">
+                    <h4>Knowledge Transfer & Documentation</h4>
+                    <div class="achievement">Created comprehensive technical documentation and training curriculum essential for Lenovo acquisition, ensuring seamless knowledge transfer during company transition</div>
+                    <div class="achievement">Delivered hands-on platform training to Tier 1/2 support teams at Lenovo headquarters, establishing standardized support processes for 100+ person organization</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="company">Previous Leadership Roles</div>
+                    </div>
+                </div>
+
+                <div class="achievement"><strong>ORock Technologies | NOC Manager (Oct 2017 - Apr 2018):</strong> Managed small NOC team supporting FedRAMP-compliant cloud infrastructure.</div>
+                
+                <div class="achievement"><strong>nexVortex Inc | Senior Network Systems Engineer (Sep 2015 - Oct 2017):</strong> Architected and supported network optimizations improving VoIP infrastructure reliability.</div>
+                
+                <div class="achievement"><strong>Verizon | Network Engineer III (Nov 2012 - Nov 2014):</strong> Contributed to large-scale network modernization projects for national Metro-E networks.
+        </div>
+
+        <div class="section">
+            <h2>TECHNICAL ENVIRONMENT</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <strong>Languages & Frameworks:</strong>
+                    Python (ML/Automation), JavaScript, Bash, FastAPI, REST APIs
+                </div>
+                <div class="tech-category">
+                    <strong>Container & Orchestration:</strong>
+                    Docker, Swarm
+                </div>
+                <div class="tech-category">
+                    <strong>Infrastructure as Code:</strong>
+                    Ansible (custom modules), Terraform, GitOps workflows
+                </div>
+                <div class="tech-category">
+                    <strong>Cloud & Networking:</strong>
+                    AWS (Solutions Architect), VMware, Cisco/Juniper, Software-Defined Networking
+                </div>
+                <div class="tech-category">
+                    <strong>Monitoring & Observability:</strong>
+                    Prometheus, Grafana, Splunk, ELK Stack, PRTG
+                </div>
+                <div class="tech-category">
+                    <strong>AI/ML Tools:</strong>
+                    Computer Vision libraries, Ollama, Machine Learning automation
+                </div>
+                <div class="tech-category">
+                    <strong>Version Control & CI/CD:</strong>
+                    Git, GitHub Actions, Jenkins
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>EDUCATION & CERTIFICATIONS</h2>
+            
+            <div class="education-item">
+                <strong>M.S. IT Service Management</strong> | Western Governors University 
+            </div>
+            <div class="education-item">
+                <strong>B.A. Government & Philosophy</strong> | College of William & Mary 
+            </div>
+
+            <h3 style="color: #667eea; margin: 20px 0 15px 0;">Professional Certifications</h3>
+            <div class="certifications">
+                <div class="cert-item">AWS Solutions Architect Associate</div>
+                <div class="cert-item">Google IT Automation with Python</div>
+                <div class="cert-item">Splunk Core User Certified</div>
+                <div class="cert-item">Previous CCNP (Cisco)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>AWARDS & RECOGNITION</h2>
+            <div class="awards-grid">
+                <div class="award-item">
+                    <strong>The Stevie Awards</strong><br>
+                    Bronze, Customer Service Team of the Year (2018)
+                </div>
+                <div class="award-item">
+                    <strong>Cloudistics Quarterly Hero Award</strong><br>
+                    Q3 2018
+                </div>
+                <div class="award-item">
+                    <strong>nexVortex Founders Award</strong><br>
+                    2016
+                </div>
+                <div class="award-item">
+                    <strong>Verizon Ovation Awards</strong><br>
+                    2012, 2013
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>TECHNICAL PROJECTS & RESEARCH</h2>
+            <div class="achievement"><strong>Personal AI/ML Infrastructure Lab:</strong> GPU-optimized homelab environment for AI model training and MLOps experimentation using Ollama and custom automation frameworks</div>
+            <div class="achievement"><strong>Open Source Contributions:</strong> Developing comprehensive SRE training platform at github.com/sre-masterclass, including hands-on chaos engineering and observability scenarios</div>
+        </div>
+    </div>
+</body>
+</html>
