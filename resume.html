@@ -354,7 +354,8 @@
             
             /* Hide non-essential elements */
             .nav-bar, 
-            .print-button { 
+            .print-button,
+            .print-instructions { 
                 display: none !important; 
             }
             
@@ -380,6 +381,47 @@
             .contact-info {
                 font-size: 10pt !important;
                 margin-bottom: 6pt !important;
+                display: flex !important;
+                justify-content: center !important;
+                gap: 15pt !important;
+                flex-wrap: wrap !important;
+                text-align: center !important;
+            }
+            
+            .contact-info span {
+                display: inline !important;
+                white-space: nowrap !important;
+            }
+            
+            /* Show actual contact info in print, not "click to show" */
+            #emailSpan {
+                visibility: hidden !important;
+                position: relative !important;
+                display: inline !important;
+            }
+            
+            #emailSpan::before {
+                content: "📧 solomon.j.sands@gmail.com" !important;
+                visibility: visible !important;
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                white-space: nowrap !important;
+            }
+            
+            #phoneSpan {
+                visibility: hidden !important;
+                position: relative !important;
+                display: inline !important;
+            }
+            
+            #phoneSpan::before {
+                content: "📱 (757) 343-8896" !important;
+                visibility: visible !important;
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+                white-space: nowrap !important;
             }
             
             .clearance {
@@ -551,7 +593,7 @@
     </style>
 </head>
 <body>
-    <button class="print-button" onclick="window.print()">📄 Print/PDF</button>
+    <button class="print-button" onclick="printResume()">📄 Print/PDF</button>
     <div class="print-instructions">
         💡 Use your browser's "Save as PDF" option for best results
     </div>
@@ -588,6 +630,32 @@
                         document.getElementById('phoneSpan').style.color = '#666';
                     }
                 }
+
+                function printResume() {
+                    // Temporarily reveal contact information for printing
+                    const emailSpan = document.getElementById('emailSpan');
+                    const phoneSpan = document.getElementById('phoneSpan');
+                    const contactInfo = document.querySelector('.contact-info');
+                    
+                    // Store original content
+                    const originalEmail = emailSpan.innerHTML;
+                    const originalPhone = phoneSpan.innerHTML;
+                    const originalContactHTML = contactInfo.innerHTML;
+                    
+                    // Replace entire contact info with single line text for PDF
+                    contactInfo.innerHTML = `📧 solomon.j.sands@gmail.com | LinkedIn: /in/solomonjsands | 📱 (757) 343-8896 | DC Metro Area`;
+                    contactInfo.style.whiteSpace = 'nowrap';
+                    contactInfo.style.textAlign = 'center';
+                    contactInfo.style.display = 'block';
+                    
+                    // Print
+                    window.print();
+                    
+                    // Restore original content after a short delay
+                    setTimeout(() => {
+                        contactInfo.innerHTML = originalContactHTML;
+                    }, 1000);
+                }
             </script>
             <div class="clearance">CURRENT SECURITY CLEARANCE</div>
         </div>
@@ -595,7 +663,7 @@
         <div class="section">
             <h2>PROFESSIONAL SUMMARY</h2>
             <p class="summary">
-                SRE Tech Lead with 10+ years of infrastructure experience implementing intelligent automation solutions. Began career in traditional network engineering before evolving into SRE through SDN and automation technologies. Proven track record of designing and maintaining systems that achieve 99.99% uptime while reducing operational overhead through AI-assisted monitoring and process automation. Expertise in modern cloud-native technologies and developer productivity tools.
+                SRE Tech Lead with 10+ years of infrastructure experience implementing intelligent automation solutions. Began career in traditional network engineering before evolving into SRE through SDN and automation technologies. Proven track record of designing and maintaining systems that achieve 99.99% uptime while reducing operational overhead through monitoring and process automation. Expertise in modern cloud-native technologies and developer productivity tools.
             </p>
         </div>
 
@@ -608,19 +676,19 @@
                 </div>
                 <div class="competency-category">
                     <h3>AI/ML Infrastructure</h3>
-                    <p>AI-assisted automation, Computer Vision integration, Machine Learning model deployment</p>
+                    <p>AI-assisted automation, Computer Vision integration</p>
                 </div>
                 <div class="competency-category">
                     <h3>Cloud Architecture</h3>
-                    <p>AWS Solutions Architect certified, Multi-cloud deployments, Cost optimization, Serverless architectures</p>
+                    <p>AWS Solutions Architect certified, Cost optimization, Serverless architectures</p>
                 </div>
                 <div class="competency-category">
                     <h3>Developer Experience</h3>
-                    <p>CI/CD optimization, Developer tooling, API design (FastAPI), Productivity engineering</p>
+                    <p>Developer tooling, API design (FastAPI), Productivity engineering</p>
                 </div>
                 <div class="competency-category">
                     <h3>Site Reliability</h3>
-                    <p>Incident response automation, Observability platforms (Prometheus/Grafana), Chaos engineering</p>
+                    <p>Incident response automation, Observability platforms (Prometheus/Grafana/Splunk), Chaos engineering</p>
                 </div>
                 <div class="competency-category">
                     <h3>Network & Security Foundation</h3>
@@ -650,9 +718,9 @@
 
                 <div class="experience-section">
                     <h4>Infrastructure Leadership & Reliability</h4>
-                    <div class="achievement">Led 24/7 platform engineering team maintaining 99.99% uptime for mission-critical infrastructure in secure environments, preventing estimated $500K+ in downtime costs annually</div>
-                    <div class="achievement">Reduced Mean Time to Resolution (MTTR) from 4 hours to under 2 hours through automated incident response workflows and AI-assisted root cause analysis</div>
-                    <div class="achievement">Established company's first SRE Incident Response framework, reducing escalation confusion by 50% and standardizing cross-team collaboration protocols</div>
+                    <div class="achievement">Led 24/7 platform engineering team maintaining 99.99% uptime for mission-critical infrastructure in secure environments</div>
+                    <div class="achievement">Reduced Mean Time to Resolution (MTTR) from 4 hours to under 2 hours through automated incident response workflows</div>
+                    <div class="achievement">Established SRE Incident Response framework, reducing escalation confusion by 50% and standardizing cross-team collaboration protocols</div>
                 </div>
 
                 <div class="experience-section">
@@ -704,7 +772,7 @@
             <div class="tech-grid">
                 <div class="tech-category">
                     <strong>Languages & Frameworks:</strong>
-                    Python (ML/Automation), JavaScript, Bash, FastAPI, REST APIs
+                    Python, JavaScript, Bash, REST APIs
                 </div>
                 <div class="tech-category">
                     <strong>Container & Orchestration:</strong>
@@ -716,7 +784,7 @@
                 </div>
                 <div class="tech-category">
                     <strong>Cloud & Networking:</strong>
-                    AWS (Solutions Architect), VMware, Cisco/Juniper, Software-Defined Networking
+                    AWS (Solutions Architect), VMware, Cisco/Juniper/PaloAto, Software-Defined Networking (PicOS)
                 </div>
                 <div class="tech-category">
                     <strong>Monitoring & Observability:</strong>
