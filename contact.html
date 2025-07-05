@@ -407,7 +407,7 @@
         (function() {
             // You'll need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
             // Get this from your EmailJS dashboard after creating an account
-            emailjs.init('YOUR_PUBLIC_KEY');
+            emailjs.init('-oYN66eJbaBCwWE7u');
         })();
 
         // Enhanced contact form functionality with EmailJS
@@ -441,7 +441,7 @@
             
             // Send email using EmailJS
             // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            emailjs.send('service_ecdgli3', 'template_q23omfm', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     
