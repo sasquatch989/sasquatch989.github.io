@@ -22,7 +22,7 @@
         }
 
         .contact-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -50,6 +50,7 @@
         .nav-bar a:hover {
             background: rgba(255, 255, 255, 0.2);
         }
+
         .contact-header {
             text-align: center;
             margin-bottom: 50px;
@@ -418,7 +419,7 @@
         (function() {
             // You'll need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
             // Get this from your EmailJS dashboard after creating an account
-            emailjs.init('-oYN66eJbaBCwWE7u');
+            emailjs.init('YOUR_PUBLIC_KEY');
         })();
 
         // Enhanced contact form functionality with EmailJS
@@ -452,7 +453,7 @@
             
             // Send email using EmailJS
             // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
-            emailjs.send('service_ecdgli3', 'template_q23omfm', formData)
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     
