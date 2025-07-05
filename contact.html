@@ -10,15 +10,22 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link rel="stylesheet" href="styles.css">
     
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            line-height: 1.6;
         }
 
         .contact-container {
@@ -262,21 +269,77 @@
         }
 
         @media (max-width: 768px) {
+            .contact-container {
+                padding: 15px;
+            }
+            
+            .nav-bar {
+                padding: 12px;
+            }
+            
+            .nav-bar a {
+                margin: 0 10px;
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+            
             .contact-header h1 {
                 font-size: 2rem;
             }
             
+            .contact-header p {
+                font-size: 1rem;
+            }
+            
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .form-row {
                 grid-template-columns: 1fr;
+                gap: 10px;
             }
             
             .contact-form,
             .contact-info-card {
-                padding: 25px;
+                padding: 20px;
+            }
+            
+            .contact-form h2,
+            .contact-info-card h2 {
+                font-size: 1.3rem;
+            }
+            
+            .contact-method {
+                padding: 12px;
+                margin-bottom: 15px;
+            }
+            
+            .contact-method .icon {
+                font-size: 1.3rem;
+                margin-right: 12px;
+                width: 25px;
+            }
+            
+            .contact-method .details h3 {
+                font-size: 1rem;
+            }
+            
+            .contact-method .details p {
+                font-size: 0.9rem;
+            }
+            
+            .availability {
+                padding: 15px;
+            }
+            
+            .availability h3 {
+                font-size: 1rem;
+            }
+            
+            .availability p {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -392,7 +455,7 @@
                     <div class="icon">💻</div>
                     <div class="details">
                         <h3>GitHub</h3>
-                        <p><a href="https://github.com/sasquatch989" target="_blank">github.com/solomonjsands</a></p>
+                        <p><a href="https://github.com/sasquatch989" target="_blank">github.com/sasquatch989</a></p>
                     </div>
                 </div>
 
